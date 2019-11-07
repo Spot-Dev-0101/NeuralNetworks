@@ -4,8 +4,8 @@ import java.util.Random;
 
 public class Neuron {
 
-    float value = 0;
-    float bias = 0;
+    public float value = 0;
+    public float bias = 0;
     public Axon[] axons;
 
     public Neuron(float value, float bias, int amountOfConnections){
@@ -18,6 +18,6 @@ public class Neuron {
     }
 
     public static Neuron createRandom(Shape nextShape){
-        return new Neuron((float)(Math.random() * ((1 - 0) + 1)) + 0, (float)(Math.random() * ((1 - 0) + 1)) + 0, nextShape.size);
+        return new Neuron(1, 1, nextShape.size);
     }
 }

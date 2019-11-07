@@ -2,8 +2,8 @@ package com.brad.AI.Util;
 
 public class Layer {
 
-    Neuron[] neurons;
-    String name = "";
+    public Neuron[] neurons;
+    public String name = "";
 
     public Layer(Shape shape, Shape nextShape, String name){
         this.name = name;
@@ -30,5 +30,14 @@ public class Layer {
         System.out.println("\n");
     }
 
+    public float[] getNeuronValues(){
+        float[] result = new float[neurons.length];
+
+        for(int i = 0; i < neurons.length; i++){
+            result[i] = neurons[i].value;
+        }
+
+        return result;
+    }
 
 }
