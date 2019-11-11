@@ -9,7 +9,7 @@ public class Axon {
     }
 
     public static Axon createRandom(){
-        return new Axon((float)Math.random());
+        return new Axon((float)Math.random());//(float)Math.random()
     }
 
 }

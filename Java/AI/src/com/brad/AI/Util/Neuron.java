@@ -18,6 +18,16 @@ public class Neuron {
     }
 
     public static Neuron createRandom(Shape nextShape){
-        return new Neuron(1, 1, nextShape.size);
+        return new Neuron((float)Math.random(), (float)Math.random(), nextShape.size);
+    }
+
+    public float[] getAxonValues(){
+        float[] result = new float[axons.length];
+
+        for(int i = 0; i < axons.length; i++){
+            result[i] = axons[i].value;
+        }
+
+        return result;
     }
 }
